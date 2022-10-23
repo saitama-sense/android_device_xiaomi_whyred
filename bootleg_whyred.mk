@@ -22,25 +22,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit from whyred device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Bootleggers stuff.
+$(call inherit-product, vendor/bootleg/config/common_full_phone.mk)
 
 # Inherit from custom vendor.
-$(call inherit-product, vendor/MiuiCamera/config.mk)
+# $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-# PixelExperience Properties
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
+# Inherit form Bootleggers Properties
+BOOTLEGGERS_BUILD_TYPE := Shishufied
+DEVICE_MAINTAINERS := Saitama
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_whyred
-PRODUCT_MODEL := Redmi Note 5 Pro
+PRODUCT_NAME := bootleg_whyred
+PRODUCT_MODEL := Redmi Note 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
